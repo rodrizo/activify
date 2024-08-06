@@ -1,0 +1,93 @@
+﻿using mineduc.Data;
+using mineduc.Models;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace mineduc.Controllers
+{
+    public class ActividadData
+    {
+        public DataSet getActividades(Actividad act)
+        {
+            Conexion cn = new Conexion();
+            DataSet ds = new DataSet();
+            using (SqlConnection connection = new SqlConnection(cn.conStrin("dbMineduc")))
+            {
+                try
+                {
+                    using (SqlCommand command = new SqlCommand("sp_crud_actividad", connection))
+                    {
+                        connection.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter();
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add(new SqlParameter("@action", "R"));
+                        if (act != null)
+                        {
+                            command.Parameters.Add(new SqlParameter("@idComite", act.IdComite));
+                        }
+                        adapter.SelectCommand = command;
+                        adapter.Fill(ds, "Actividad");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                return ds;
+            }
+        }
+        public void ActividadCRUD(Actividad act, string action)
+        {
+            Conexion cn = new Conexion();
+            using (SqlConnection connection = new SqlConnection(cn.conStrin("dbMineduc")))
+            {
+                try
+                {
+                    using (SqlCommand command = new SqlCommand("sp_crud_actividad", connection))
+                    {
+                        connection.Open();
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add(new SqlParameter("@action", action));
+                        if (action == "C")
+                        {
+                            command.Parameters.Add(new SqlParameter("@nombre", act.Nombre));
+                            command.Parameters.Add(new SqlParameter("@fecha", act.Fecha));
+                            command.Parameters.Add(new SqlParameter("@estimado", act.Estimado));
+                            command.Parameters.Add(new SqlParameter("@detalle", act.DetalleActividades));
+                            command.Parameters.Add(new SqlParameter("@observaciones", act.Observaciones));
+                            command.Parameters.Add(new SqlParameter("@idTipoActividad", act.IdTipoActividad));
+                            command.Parameters.Add(new SqlParameter("@idComite", act.IdComite));
+                        }
+                        else if (action == "U")
+                        {
+                            command.Parameters.Add(new SqlParameter("@idActividad", act.IdActividad));
+                            command.Parameters.Add(new SqlParameter("@nombre", act.Nombre));
+                            command.Parameters.Add(new SqlParameter("@fecha", act.Fecha));
+                            command.Parameters.Add(new SqlParameter("@estimado", act.Estimado));
+                            command.Parameters.Add(new SqlParameter("@detalle", act.DetalleActividades));
+                            command.Parameters.Add(new SqlParameter("@observaciones", act.Observaciones));
+                            command.Parameters.Add(new SqlParameter("@idTipoActividad", act.IdTipoActividad));
+                        }
+                        else if (action == "D")
+                        {
+                            command.Parameters.Add(new SqlParameter("@idActividad", act.IdActividad));
+                        }
+                        command.ExecuteNonQuery();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+        }
+    }
+}

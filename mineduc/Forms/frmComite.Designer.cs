@@ -1,0 +1,288 @@
+﻿namespace mineduc.Forms
+{
+    partial class frmComite
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnVer = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnPersona = new System.Windows.Forms.Button();
+            this.cmbEscuelas = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtFondo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.gridComites = new System.Windows.Forms.DataGridView();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnResult = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridComites)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnVer);
+            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.cmbEscuelas);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtFondo);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.gridComites);
+            this.groupBox1.Controls.Add(this.btnEliminar);
+            this.groupBox1.Controls.Add(this.lblName);
+            this.groupBox1.Controls.Add(this.btnEdit);
+            this.groupBox1.Controls.Add(this.txtName);
+            this.groupBox1.Controls.Add(this.btnGuardar);
+            this.groupBox1.Location = new System.Drawing.Point(34, 135);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1161, 757);
+            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Comités";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnVer
+            // 
+            this.btnVer.ForeColor = System.Drawing.Color.Black;
+            this.btnVer.Location = new System.Drawing.Point(321, 391);
+            this.btnVer.Name = "btnVer";
+            this.btnVer.Size = new System.Drawing.Size(142, 51);
+            this.btnVer.TabIndex = 31;
+            this.btnVer.Text = "Ver";
+            this.btnVer.UseVisualStyleBackColor = true;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnResult);
+            this.groupBox3.Controls.Add(this.btnPersona);
+            this.groupBox3.Location = new System.Drawing.Point(97, 529);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1003, 162);
+            this.groupBox3.TabIndex = 29;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Opciones";
+            // 
+            // btnPersona
+            // 
+            this.btnPersona.ForeColor = System.Drawing.Color.Black;
+            this.btnPersona.Location = new System.Drawing.Point(120, 58);
+            this.btnPersona.Name = "btnPersona";
+            this.btnPersona.Size = new System.Drawing.Size(340, 51);
+            this.btnPersona.TabIndex = 27;
+            this.btnPersona.Text = "Añadir Personas";
+            this.btnPersona.UseVisualStyleBackColor = true;
+            this.btnPersona.Click += new System.EventHandler(this.btnPersona_Click);
+            // 
+            // cmbEscuelas
+            // 
+            this.cmbEscuelas.FormattingEnabled = true;
+            this.cmbEscuelas.Location = new System.Drawing.Point(97, 250);
+            this.cmbEscuelas.Name = "cmbEscuelas";
+            this.cmbEscuelas.Size = new System.Drawing.Size(188, 28);
+            this.cmbEscuelas.TabIndex = 30;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(26, 253);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 20);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Escuela";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(26, 203);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 20);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Fondo";
+            // 
+            // txtFondo
+            // 
+            this.txtFondo.Location = new System.Drawing.Point(97, 202);
+            this.txtFondo.Name = "txtFondo";
+            this.txtFondo.Size = new System.Drawing.Size(188, 26);
+            this.txtFondo.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(33, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 36);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Datos";
+            // 
+            // gridComites
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.gridComites.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridComites.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.gridComites.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridComites.DefaultCellStyle = dataGridViewCellStyle9;
+            this.gridComites.EnableHeadersVisualStyles = false;
+            this.gridComites.Location = new System.Drawing.Point(321, 59);
+            this.gridComites.Name = "gridComites";
+            this.gridComites.RowHeadersVisible = false;
+            this.gridComites.RowHeadersWidth = 62;
+            this.gridComites.RowTemplate.Height = 28;
+            this.gridComites.Size = new System.Drawing.Size(696, 300);
+            this.gridComites.TabIndex = 13;
+            this.gridComites.DoubleClick += new System.EventHandler(this.gridComites_DoubleClick);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminar.Location = new System.Drawing.Point(863, 391);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(154, 51);
+            this.btnEliminar.TabIndex = 24;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.ForeColor = System.Drawing.Color.Black;
+            this.lblName.Location = new System.Drawing.Point(26, 153);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(65, 20);
+            this.lblName.TabIndex = 15;
+            this.lblName.Text = "Nombre";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.ForeColor = System.Drawing.Color.Black;
+            this.btnEdit.Location = new System.Drawing.Point(681, 391);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(140, 51);
+            this.btnEdit.TabIndex = 23;
+            this.btnEdit.Text = "Editar";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(97, 149);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(188, 26);
+            this.txtName.TabIndex = 14;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardar.Location = new System.Drawing.Point(499, 391);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(141, 51);
+            this.btnGuardar.TabIndex = 22;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnResult
+            // 
+            this.btnResult.ForeColor = System.Drawing.Color.Black;
+            this.btnResult.Location = new System.Drawing.Point(545, 58);
+            this.btnResult.Name = "btnResult";
+            this.btnResult.Size = new System.Drawing.Size(340, 51);
+            this.btnResult.TabIndex = 28;
+            this.btnResult.Text = "Ver Resultados de Mejoramiento";
+            this.btnResult.UseVisualStyleBackColor = true;
+            this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
+            // 
+            // frmComite
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1271, 929);
+            this.Controls.Add(this.groupBox1);
+            this.Name = "frmComite";
+            this.Text = "Comites";
+            this.Load += new System.EventHandler(this.frmComite_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridComites)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView gridComites;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtFondo;
+        private System.Windows.Forms.ComboBox cmbEscuelas;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnPersona;
+        private System.Windows.Forms.Button btnVer;
+        private System.Windows.Forms.Button btnResult;
+    }
+}
