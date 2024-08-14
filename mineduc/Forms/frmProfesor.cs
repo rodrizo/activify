@@ -112,5 +112,10 @@ namespace mineduc.Forms
             txtTelefono.Text = gridProfesores.CurrentRow.Cells["Telefono"].Value.ToString();
             txtDPI.Text = gridProfesores.CurrentRow.Cells["DPI"].Value.ToString();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
