@@ -185,6 +185,7 @@
     <Compile Include="Controllers\BitacoraData.cs" />
     <Compile Include="Controllers\ComboData.cs" />
     <Compile Include="Controllers\ComiteData.cs" />
+    <Compile Include="Controllers\ProfesorData.cs" />
     <Compile Include="Controllers\EscuelaData.cs" />
     <Compile Include="Controllers\FacturaData.cs" />
     <Compile Include="Controllers\GastoData.cs" />
@@ -207,6 +208,12 @@
     </Compile>
     <Compile Include="Forms\frmComite.Designer.cs">
       <DependentUpon>frmComite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProfesor.Designer.cs">
+      <DependentUpon>frmProfesor.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmEscuela.cs">
       <SubType>Form</SubType>
@@ -246,6 +253,7 @@
     </Compile>
     <Compile Include="Models\Actividad.cs" />
     <Compile Include="Models\Comite.cs" />
+    <Compile Include="Models\Profesor.cs" />
     <Compile Include="Models\Escuela.cs" />
     <Compile Include="Models\Factura.cs" />
     <Compile Include="Models\Gasto.cs" />
@@ -261,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmComite.resx">
       <DependentUpon>frmComite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProfesor.resx">
+      <DependentUpon>frmProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmEscuela.resx">
       <DependentUpon>frmEscuela.cs</DependentUpon>

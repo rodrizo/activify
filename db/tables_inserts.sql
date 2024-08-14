@@ -8,7 +8,7 @@ CREATE TABLE Profesor(
 	ProfesorId INT IDENTITY PRIMARY KEY,
 	Nombre VARCHAR(50),
 	Email VARCHAR(50),
-	Telefono INT,
+	Telefono VARCHAR(50),
 	DPI VARCHAR(50)
 );
 
@@ -59,6 +59,16 @@ CREATE TABLE Alumno(
 	Nombre VARCHAR(50),
 	Telefono INT,
 	SeccionId INT FOREIGN KEY REFERENCES Seccion(SeccionId)
+);
+
+
+CREATE TABLE Bitacora(
+	BitacoraId INT IDENTITY PRIMARY KEY,
+	Action VARCHAR(250),
+	SpName VARCHAR(250),
+	Parameters VARCHAR(MAX),
+	UserId BIGINT,
+	CreateDate DATETIME
 );
 
 -- INSERCION DE DATOS 

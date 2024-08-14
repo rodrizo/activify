@@ -37,7 +37,7 @@
             this.btnEscuela = new System.Windows.Forms.Button();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnBitacora = new System.Windows.Forms.Button();
+            this.btnProfesor = new System.Windows.Forms.Button();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitleBar.SuspendLayout();
@@ -50,16 +50,18 @@
             this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(406, 117);
+            this.panelLogo.Size = new System.Drawing.Size(361, 94);
             this.panelLogo.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::mineduc.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(108, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(96, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(191, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(170, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -69,9 +71,10 @@
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(406, 0);
+            this.panelTitleBar.Location = new System.Drawing.Point(361, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1373, 117);
+            this.panelTitleBar.Size = new System.Drawing.Size(1220, 94);
             this.panelTitleBar.TabIndex = 5;
             // 
             // lblTitle
@@ -79,9 +82,9 @@
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(512, 38);
+            this.lblTitle.Location = new System.Drawing.Point(455, 30);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(390, 38);
+            this.lblTitle.Size = new System.Drawing.Size(328, 32);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Ministerio de educación";
             // 
@@ -92,9 +95,10 @@
             this.btnActividades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActividades.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActividades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActividades.Location = new System.Drawing.Point(0, 474);
+            this.btnActividades.Location = new System.Drawing.Point(0, 379);
+            this.btnActividades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActividades.Name = "btnActividades";
-            this.btnActividades.Size = new System.Drawing.Size(406, 184);
+            this.btnActividades.Size = new System.Drawing.Size(361, 147);
             this.btnActividades.TabIndex = 4;
             this.btnActividades.Text = "Actividades";
             this.btnActividades.UseVisualStyleBackColor = true;
@@ -107,9 +111,10 @@
             this.btnComite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComite.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnComite.Location = new System.Drawing.Point(0, 290);
+            this.btnComite.Location = new System.Drawing.Point(0, 232);
+            this.btnComite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnComite.Name = "btnComite";
-            this.btnComite.Size = new System.Drawing.Size(406, 184);
+            this.btnComite.Size = new System.Drawing.Size(361, 147);
             this.btnComite.TabIndex = 2;
             this.btnComite.Text = "Comité";
             this.btnComite.UseVisualStyleBackColor = true;
@@ -122,9 +127,10 @@
             this.btnEscuela.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEscuela.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscuela.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEscuela.Location = new System.Drawing.Point(0, 117);
+            this.btnEscuela.Location = new System.Drawing.Point(0, 94);
+            this.btnEscuela.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEscuela.Name = "btnEscuela";
-            this.btnEscuela.Size = new System.Drawing.Size(406, 173);
+            this.btnEscuela.Size = new System.Drawing.Size(361, 138);
             this.btnEscuela.TabIndex = 1;
             this.btnEscuela.Text = "Escuela";
             this.btnEscuela.UseVisualStyleBackColor = true;
@@ -134,48 +140,52 @@
             // 
             this.panelDesktopPane.BackColor = System.Drawing.Color.LightGray;
             this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktopPane.Location = new System.Drawing.Point(406, 0);
+            this.panelDesktopPane.Location = new System.Drawing.Point(361, 0);
+            this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(1373, 872);
+            this.panelDesktopPane.Size = new System.Drawing.Size(1220, 698);
             this.panelDesktopPane.TabIndex = 6;
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.btnBitacora);
+            this.panelMenu.Controls.Add(this.btnProfesor);
             this.panelMenu.Controls.Add(this.btnActividades);
             this.panelMenu.Controls.Add(this.btnComite);
             this.panelMenu.Controls.Add(this.btnEscuela);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(406, 872);
+            this.panelMenu.Size = new System.Drawing.Size(361, 698);
             this.panelMenu.TabIndex = 4;
             // 
-            // btnBitacora
+            // btnProfesor
             // 
-            this.btnBitacora.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBitacora.FlatAppearance.BorderSize = 0;
-            this.btnBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBitacora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBitacora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBitacora.Location = new System.Drawing.Point(0, 658);
-            this.btnBitacora.Name = "btnBitacora";
-            this.btnBitacora.Size = new System.Drawing.Size(406, 184);
-            this.btnBitacora.TabIndex = 5;
-            this.btnBitacora.Text = "Bitácora";
-            this.btnBitacora.UseVisualStyleBackColor = true;
-            this.btnBitacora.Click += new System.EventHandler(this.btnBitacora_Click);
+            this.btnProfesor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProfesor.FlatAppearance.BorderSize = 0;
+            this.btnProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfesor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfesor.Location = new System.Drawing.Point(0, 526);
+            this.btnProfesor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProfesor.Name = "btnProfesor";
+            this.btnProfesor.Size = new System.Drawing.Size(361, 138);
+            this.btnProfesor.TabIndex = 5;
+            this.btnProfesor.Text = "Profesor";
+            this.btnProfesor.UseVisualStyleBackColor = true;
+            this.btnProfesor.Click += new System.EventHandler(this.btnProfesor_Click);
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1779, 872);
+            this.ClientSize = new System.Drawing.Size(1581, 698);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelMenu);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmPrincipal";
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
@@ -198,7 +208,7 @@
         private System.Windows.Forms.Panel panelDesktopPane;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnBitacora;
+        private System.Windows.Forms.Button btnProfesor;
     }
 }
 

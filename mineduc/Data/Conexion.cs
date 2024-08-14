@@ -12,9 +12,9 @@ namespace mineduc.Data
         private string connection;
         #region "Método para retornar cadena de conexión"
         //Al invocar al método conStrin, se retornará la cadena de conexión proveniente de App.config
-        public string conStrin(string mineducDB)
+        public string conStrin(string activifyDB)
         {
-            connection = ConfigurationManager.ConnectionStrings[mineducDB].ConnectionString;
+            connection = ConfigurationManager.ConnectionStrings[activifyDB].ConnectionString;
 
             return connection;
         }

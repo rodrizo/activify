@@ -111,5 +111,10 @@ namespace mineduc
         {
             OpenChildForm(new mineduc.Forms.frmBitacora(), sender);
         }
+
+        private void btnProfesor_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new mineduc.Forms.frmProfesor(), sender);
+        }
     }
 }
