@@ -33,7 +33,7 @@ CREATE TABLE Actividad(
 	LastModifiedDate DATETIME,
 	TipoActividadId INT FOREIGN KEY REFERENCES TipoActividad(TipoActividadId),
 	SeccionId INT FOREIGN KEY REFERENCES Seccion(SeccionId),
-	Responsable VARCHAR(50)
+	AlumnoId INT
 );
 
 CREATE TABLE Gasto(
@@ -87,8 +87,8 @@ INSERT INTO TipoActividad(descripcion) VALUES ('Ambiental');
 INSERT INTO Seccion (Grado, Aula, ProfesorId) VALUES ('1ro Basico','"A"', 1);
 INSERT INTO Seccion (Grado, Aula, ProfesorId) VALUES ('2do Basico','"B"', 1);
 
-INSERT INTO Actividad VALUES ('Cumpleaños Pedrito', '2024-09-01',500.00,'Ninguna', GETDATE(), 2, 1,'Daniela Ortega');
-INSERT INTO Actividad VALUES ('Torneo de Futbol', '2024-08-15',250.00,'Arbitraje y refaccion', GETDATE(), 5, 2,'Cristian Paz');
+INSERT INTO Actividad VALUES ('Cumpleaños Pedrito', '2024-09-01',500.00,'Ninguna', GETDATE(), 2, 1,1);
+INSERT INTO Actividad VALUES ('Torneo de Futbol', '2024-08-15',250.00,'Arbitraje y refaccion', GETDATE(), 5, 2,2);
 
 INSERT INTO Gasto VALUES ('Compra de Pastel', 150.00, GETDATE(), 1);
 INSERT INTO Gasto VALUES ('Pizza', 200.00, GETDATE(), 1);

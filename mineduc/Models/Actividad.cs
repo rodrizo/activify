@@ -8,13 +8,13 @@ namespace mineduc.Models
 {
     public class Actividad
     {
-        public int IdActividad { get; set; }
+        public int ActividadId { get; set; }
         public string Nombre { get; set; }
         public DateTime Fecha { get; set; }
-        public decimal Estimado { get; set; }
-        public string DetalleActividades { get; set; }
+        public decimal Monto { get; set; }
         public string Observaciones { get; set; }
-        public int IdTipoActividad { get; set; }
-        public int IdComite { get; set; }
+        public int TipoActividadId { get; set; }
+        public int SeccionId { get; set; }
+        public int AlumnoId { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace mineduc.Controllers
         {
             Conexion cn = new Conexion();
             DataSet ds = new DataSet();
-            using (SqlConnection connection = new SqlConnection(cn.conStrin("dbMineduc")))
+            using (SqlConnection connection = new SqlConnection(cn.conStrin("dbActivify")))
             {
                 try
                 {
@@ -29,7 +29,7 @@ namespace mineduc.Controllers
                         command.Parameters.Add(new SqlParameter("@action", "R"));
                         if (act != null)
                         {
-                            command.Parameters.Add(new SqlParameter("@idComite", act.IdComite));
+                            command.Parameters.Add(new SqlParameter("@seccionId", act.SeccionId));
                         }
                         adapter.SelectCommand = command;
                         adapter.Fill(ds, "Actividad");
@@ -45,7 +45,7 @@ namespace mineduc.Controllers
         public void ActividadCRUD(Actividad act, string action)
         {
             Conexion cn = new Conexion();
-            using (SqlConnection connection = new SqlConnection(cn.conStrin("dbMineduc")))
+            using (SqlConnection connection = new SqlConnection(cn.conStrin("dbActivify")))
             {
                 try
                 {
@@ -58,25 +58,26 @@ namespace mineduc.Controllers
                         {
                             command.Parameters.Add(new SqlParameter("@nombre", act.Nombre));
                             command.Parameters.Add(new SqlParameter("@fecha", act.Fecha));
-                            command.Parameters.Add(new SqlParameter("@estimado", act.Estimado));
-                            command.Parameters.Add(new SqlParameter("@detalle", act.DetalleActividades));
+                            command.Parameters.Add(new SqlParameter("@monto", act.Monto));
                             command.Parameters.Add(new SqlParameter("@observaciones", act.Observaciones));
-                            command.Parameters.Add(new SqlParameter("@idTipoActividad", act.IdTipoActividad));
-                            command.Parameters.Add(new SqlParameter("@idComite", act.IdComite));
+                            command.Parameters.Add(new SqlParameter("@tipoActividadId", act.TipoActividadId));
+                            command.Parameters.Add(new SqlParameter("@seccionId", act.SeccionId));
+                            command.Parameters.Add(new SqlParameter("@alumnoId", act.AlumnoId));
                         }
                         else if (action == "U")
                         {
-                            command.Parameters.Add(new SqlParameter("@idActividad", act.IdActividad));
+                            command.Parameters.Add(new SqlParameter("@actividadId", act.ActividadId));
                             command.Parameters.Add(new SqlParameter("@nombre", act.Nombre));
                             command.Parameters.Add(new SqlParameter("@fecha", act.Fecha));
-                            command.Parameters.Add(new SqlParameter("@estimado", act.Estimado));
-                            command.Parameters.Add(new SqlParameter("@detalle", act.DetalleActividades));
+                            command.Parameters.Add(new SqlParameter("@monto", act.Monto));
                             command.Parameters.Add(new SqlParameter("@observaciones", act.Observaciones));
-                            command.Parameters.Add(new SqlParameter("@idTipoActividad", act.IdTipoActividad));
+                            command.Parameters.Add(new SqlParameter("@tipoActividadId", act.TipoActividadId));
+                            command.Parameters.Add(new SqlParameter("@seccionId", act.SeccionId));
+                            command.Parameters.Add(new SqlParameter("@alumnoId", act.AlumnoId));
                         }
                         else if (action == "D")
                         {
-                            command.Parameters.Add(new SqlParameter("@idActividad", act.IdActividad));
+                            command.Parameters.Add(new SqlParameter("@actividadId", act.ActividadId));
                         }
                         command.ExecuteNonQuery();
                     }

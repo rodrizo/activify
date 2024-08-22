@@ -18,6 +18,7 @@ namespace mineduc.Forms
         Actividad act = new Actividad();
         ActividadData actData = new ActividadData();
         private int Id;
+        private int seccionId;
 
         #region "Llenando grid de actividades"
         private void getActividades(Actividad actividad)
@@ -32,14 +33,14 @@ namespace mineduc.Forms
         #region "Obteniendo los datos ingresados en el form"
         private void getData()
         {
-            act.IdActividad = Id;
+            act.ActividadId = Id;
             act.Nombre = txtName.Text;
             act.Fecha = fecha.Value;
-            act.Estimado = (txtEstimado.Text == string.Empty) ? 0 : Convert.ToDecimal(txtEstimado.Text);
-            act.DetalleActividades = txtDetalle.Text;
+            act.Monto = (txtMonto.Text == string.Empty) ? 0 : Convert.ToDecimal(txtMonto.Text);
             act.Observaciones = txtObser.Text;
-            act.IdTipoActividad = Convert.ToInt32(cmbActividad.SelectedValue);
-            act.IdComite = Convert.ToInt32(cmbComite.SelectedValue);
+            act.TipoActividadId = Convert.ToInt32(cmbActividad.SelectedValue);
+            act.SeccionId = Convert.ToInt32(cmbSeccion.SelectedValue);
+            act.AlumnoId = Convert.ToInt32(cmbAlumno.SelectedValue);
         }
         #endregion
 
@@ -53,13 +54,25 @@ namespace mineduc.Forms
         }
         #endregion
 
-        #region "Obteniendo y llenando combobox de tipo de comités"
-        private void getComites()
+        #region "Obteniendo y llenando combobox de tipo de secciones"
+        private void getSecciones()
         {
             ComboData cmb = new ComboData();
-            cmbComite.DataSource = cmb.getComites();
-            cmbComite.DisplayMember = "Nombre";
-            cmbComite.ValueMember = "ComiteId";
+            cmbSeccion.DataSource = cmb.getSecciones();
+            cmbSeccion.DisplayMember = "Nombre";
+            cmbSeccion.ValueMember = "SeccionId";
+
+            seccionId = Convert.ToInt32(cmbSeccion.SelectedValue);
+        }
+        #endregion
+
+        #region "Obteniendo y llenando combobox de tipo de alumnos"
+        private void getAlumnos()
+        {
+            ComboData cmb = new ComboData();
+            cmbAlumno.DataSource = cmb.getAlumnos(seccionId);
+            cmbAlumno.DisplayMember = "Nombre";
+            cmbAlumno.ValueMember = "AlumnoId";
         }
         #endregion
 
@@ -69,13 +82,14 @@ namespace mineduc.Forms
             Id = 0;
             txtName.Text = string.Empty;
             fecha.Text = string.Empty;
-            txtEstimado.Text = string.Empty;
-            txtDetalle.Text = string.Empty;
+            txtMonto.Text = string.Empty;
             txtObser.Text = string.Empty;
             cmbActividad.Text = string.Empty;
-            cmbComite.Text = string.Empty;
+            cmbSeccion.Text = string.Empty;
+            cmbAlumno.Text = string.Empty;
             getTipoActividad();
-            getComites();
+            getSecciones();
+            getAlumnos();
         }
         #endregion
         public frmActividad()
@@ -87,7 +101,8 @@ namespace mineduc.Forms
         {
             getActividades(null);
             getTipoActividad();
-            getComites();
+            getSecciones();
+            getAlumnos();
         }
 
         private void gridActividades_DoubleClick(object sender, EventArgs e)
@@ -95,11 +110,11 @@ namespace mineduc.Forms
             Id = Convert.ToInt32(gridActividades.CurrentRow.Cells["Id"].Value.ToString());
             txtName.Text = gridActividades.CurrentRow.Cells["Nombre"].Value.ToString();
             fecha.Value = DateTime.Parse(gridActividades.CurrentRow.Cells["Fecha"].Value.ToString());
-            txtEstimado.Text = gridActividades.CurrentRow.Cells["Estimado"].Value.ToString();
-            txtDetalle.Text = gridActividades.CurrentRow.Cells["Detalle"].Value.ToString();
+            txtMonto.Text = gridActividades.CurrentRow.Cells["Monto"].Value.ToString();
             txtObser.Text = gridActividades.CurrentRow.Cells["Observaciones"].Value.ToString();
             cmbActividad.Text = gridActividades.CurrentRow.Cells["Actividad"].Value.ToString();
-            cmbComite.Text = gridActividades.CurrentRow.Cells["Comite"].Value.ToString();
+            cmbSeccion.Text = gridActividades.CurrentRow.Cells["Seccion"].Value.ToString();
+            cmbAlumno.Text = gridActividades.CurrentRow.Cells["Alumno Responsable"].Value.ToString();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -156,21 +171,28 @@ namespace mineduc.Forms
         private void btnVer_Click(object sender, EventArgs e)
         {
             getData();
-            getActividades(act); //filtrar actividad por comité
+            getActividades(act); //filtrar actividad por sección
         }
 
         private void btnGasto_Click(object sender, EventArgs e)
         {
             getData();
-            if (act is null || act.IdActividad == 0)
+            if (act is null || act.ActividadId == 0)
             {
                 MessageBox.Show("No se seleccionó ninguna actividad");
             }
             else
             {
-                frmGasto frm = new frmGasto(act.IdActividad);
+                frmGasto frm = new frmGasto(act.ActividadId);
                 frm.Show();
             }
+        }
+
+        private void cmbSeccion_Click(object sender, EventArgs e)
+        {
+            getSecciones();
+            getAlumnos();
+            seccionId = 0;
         }
     }
 }

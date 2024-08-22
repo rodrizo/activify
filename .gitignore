@@ -1,3 +1,4 @@
 .vs
-mineduc\App.config
+mineduc/App.config
 packages
+.gitignore
