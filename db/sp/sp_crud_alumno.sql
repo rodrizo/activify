@@ -1,15 +1,11 @@
 USE [ACTIVIFY]
 GO
-/*
-Creador: Wilson Morales
-Funcionalidad: SP para realizar CRUD de escuelas
-*/
-CREATE PROCEDURE sp_crud_almunno
+ALTER PROCEDURE sp_crud_alumno
    @action VARCHAR(3) = NULL,
-   @AlmumnoId INT = NULL,
+   @AlumnoId INT = NULL,
    @Carnet VARCHAR(50) = NULL,
    @Nombre VARCHAR(25) = NULL,
-   @Telefono INT = NULL,
+   @Telefono VARCHAR(25) = NULL,
    @SeccionId INT = NULL
 AS
 BEGIN
@@ -32,12 +28,12 @@ BEGIN
 	BEGIN
 		UPDATE Alumno
 		SET Carnet = @Carnet, Nombre = @Nombre, Telefono = @Telefono
-		WHERE AlumnoId = @AlmumnoId
+		WHERE AlumnoId = @AlumnoId
 	END
 	
 	IF (@action = 'D') --DELETE
 	BEGIN
-		DELETE Alumno where AlumnoId = @AlmumnoId
+		DELETE Alumno where AlumnoId = @AlumnoId
 	END
 
 	IF(@action <> 'R')
@@ -46,6 +42,6 @@ BEGIN
 		DECLARE @actionName VARCHAR(25);
 		SELECT @actionName = CASE WHEN @action = 'C' THEN 'Create' WHEN @action = 'U' THEN 'Update' WHEN @action = 'D' THEN 'Delete' ELSE NULL END
 
-		INSERT INTO Bitacora VALUES(@actionName, 'sp_crud_alumno', CONCAT(@action,',',ISNULL(@AlmumnoId, 0),',',ISNULL(@Carnet, 'NULL'),',',ISNULL(@nombre, 'NULL'),',',ISNULL(@Telefono, 'NULL'),',',ISNULL(@SeccionId, 0)), 1000, GETDATE())
+		INSERT INTO Bitacora VALUES(@actionName, 'sp_crud_alumno', CONCAT(@action,',',ISNULL(@AlumnoId, 0),',',ISNULL(@Carnet, 'NULL'),',',ISNULL(@nombre, 'NULL'),',',ISNULL(@Telefono, 'NULL'),',',ISNULL(@SeccionId, 0)), 1000, GETDATE())
 	END
 END

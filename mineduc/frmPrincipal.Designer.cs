@@ -33,7 +33,7 @@
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnActividades = new System.Windows.Forms.Button();
-            this.btnComite = new System.Windows.Forms.Button();
+            this.btnSeccion = new System.Windows.Forms.Button();
             this.btnEscuela = new System.Windows.Forms.Button();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
@@ -104,21 +104,21 @@
             this.btnActividades.UseVisualStyleBackColor = true;
             this.btnActividades.Click += new System.EventHandler(this.btnActividades_Click);
             // 
-            // btnComite
+            // btnSeccion
             // 
-            this.btnComite.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnComite.FlatAppearance.BorderSize = 0;
-            this.btnComite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComite.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnComite.Location = new System.Drawing.Point(0, 232);
-            this.btnComite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnComite.Name = "btnComite";
-            this.btnComite.Size = new System.Drawing.Size(361, 147);
-            this.btnComite.TabIndex = 2;
-            this.btnComite.Text = "Comité";
-            this.btnComite.UseVisualStyleBackColor = true;
-            this.btnComite.Click += new System.EventHandler(this.btnComite_Click);
+            this.btnSeccion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSeccion.FlatAppearance.BorderSize = 0;
+            this.btnSeccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeccion.Location = new System.Drawing.Point(0, 232);
+            this.btnSeccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSeccion.Name = "btnSeccion";
+            this.btnSeccion.Size = new System.Drawing.Size(361, 147);
+            this.btnSeccion.TabIndex = 2;
+            this.btnSeccion.Text = "Sección";
+            this.btnSeccion.UseVisualStyleBackColor = true;
+            this.btnSeccion.Click += new System.EventHandler(this.btnSeccion_Click);
             // 
             // btnEscuela
             // 
@@ -151,7 +151,7 @@
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelMenu.Controls.Add(this.btnProfesor);
             this.panelMenu.Controls.Add(this.btnActividades);
-            this.panelMenu.Controls.Add(this.btnComite);
+            this.panelMenu.Controls.Add(this.btnSeccion);
             this.panelMenu.Controls.Add(this.btnEscuela);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -203,7 +203,7 @@
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnActividades;
-        private System.Windows.Forms.Button btnComite;
+        private System.Windows.Forms.Button btnSeccion;
         private System.Windows.Forms.Button btnEscuela;
         private System.Windows.Forms.Panel panelDesktopPane;
         private System.Windows.Forms.Panel panelMenu;

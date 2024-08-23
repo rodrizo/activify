@@ -57,7 +57,7 @@ CREATE TABLE Alumno(
 	AlumnoId INT IDENTITY PRIMARY KEY,
 	Carnet VARCHAR(50),
 	Nombre VARCHAR(50),
-	Telefono INT,
+	Telefono VARCHAR(50),
 	SeccionId INT FOREIGN KEY REFERENCES Seccion(SeccionId)
 );
 

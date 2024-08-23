@@ -18,7 +18,7 @@ namespace mineduc.Controllers
         private SqlDataReader reader;
 
         #region "Retornando tabla con data de profesores"
-        public DataTable getEscuelas()
+        public DataTable getProfesores()
         {
             DataTable dt = new DataTable();
             using (SqlConnection connection = new SqlConnection(cn.conStrin("dbActivify")))

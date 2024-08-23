@@ -40,13 +40,13 @@ namespace mineduc.Forms
         #endregion
 
         #region "Obteniendo y llenando combobox de escuelas"
-        private void getEscuelas()
-        {
-            ComboData cmb = new ComboData();
-            cmbEscuelas.DataSource = cmb.getEscuelas();
-            cmbEscuelas.DisplayMember = "Nombre";
-            cmbEscuelas.ValueMember = "EscuelaId";
-        }
+        //private void getEscuelas()
+        //{
+        //    ComboData cmb = new ComboData();
+        //    cmbEscuelas.DataSource = cmb.getEscuelas();
+        //    cmbEscuelas.DisplayMember = "Nombre";
+        //    cmbEscuelas.ValueMember = "EscuelaId";
+        //}
         #endregion
 
         #region "Limpiando los campos"
@@ -56,7 +56,7 @@ namespace mineduc.Forms
             txtName.Text = string.Empty;
             txtFondo.Text = string.Empty;
             cmbEscuelas.Text = string.Empty;
-            getEscuelas();
+            //getEscuelas();
         }
         #endregion
 
@@ -68,7 +68,7 @@ namespace mineduc.Forms
         private void frmComite_Load(object sender, EventArgs e)
         {
             getComites(null);
-            getEscuelas();
+            //getEscuelas();
         }
 
         private void gridComites_DoubleClick(object sender, EventArgs e)

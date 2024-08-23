@@ -97,11 +97,6 @@ namespace mineduc
 
         }
 
-        private void btnComite_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new mineduc.Forms.frmComite(), sender);
-        }
-
         private void btnActividades_Click(object sender, EventArgs e)
         {
             OpenChildForm(new mineduc.Forms.frmActividad(), sender);
@@ -115,6 +110,11 @@ namespace mineduc
         private void btnProfesor_Click(object sender, EventArgs e)
         {
             OpenChildForm(new mineduc.Forms.frmProfesor(), sender);
+        }
+
+        private void btnSeccion_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new mineduc.Forms.frmSeccion(), sender);
         }
     }
 }

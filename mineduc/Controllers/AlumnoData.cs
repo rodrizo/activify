@@ -65,6 +65,7 @@ namespace mineduc.Controllers
                         }
                         else if (action == "U")
                         {
+                            command.Parameters.Add(new SqlParameter("@AlumnoId", alm.AlumnoId));
                             command.Parameters.Add(new SqlParameter("@Carnet", alm.Carnet));
                             command.Parameters.Add(new SqlParameter("@Nombre", alm.Nombre));
                             command.Parameters.Add(new SqlParameter("@Telefono", alm.Telefono));

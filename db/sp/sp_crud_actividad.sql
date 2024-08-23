@@ -24,10 +24,10 @@ BEGIN
 	BEGIN
 		SELECT a.ActividadId [Id], a.Nombre, a.Fecha, a.Monto, a.Observaciones, ta.Descripcion [Actividad], CONCAT(s.Grado, ' - ', s.Aula) [Seccion], al.Nombre [Alumno Responsable]
 		FROM Actividad a WITH(NOLOCK)  
-		INNER JOIN Alumno al WITH(NOLOCK) ON al.AlumnoId = a.AlumnoId
 		INNER JOIN Seccion s WITH(NOLOCK) ON s.SeccionId = a.SeccionId
 		INNER JOIN Profesor p WITH(NOLOCK) ON p.ProfesorId = s.ProfesorId
 		INNER JOIN TipoActividad ta WITH(NOLOCK) ON ta.TipoActividadId = a.TipoActividadId
+		LEFT JOIN Alumno al WITH(NOLOCK) ON al.AlumnoId = a.AlumnoId
 		WHERE a.SeccionId = ISNULL(@seccionId, a.SeccionId)
 	END
 	

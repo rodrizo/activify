@@ -115,9 +115,9 @@ namespace mineduc.Forms
         private void gridPersonas_DoubleClick(object sender, EventArgs e)
         {
             Id = Convert.ToInt32(gridAlumnos.CurrentRow.Cells["Id"].Value.ToString());
+            txtCarnet.Text = gridAlumnos.CurrentRow.Cells["Carnet"].Value.ToString();
             txtName.Text = gridAlumnos.CurrentRow.Cells["Nombre"].Value.ToString();
             txtTelefono.Text = gridAlumnos.CurrentRow.Cells["Telefono"].Value.ToString();
-            txtCarnet.Text = gridAlumnos.CurrentRow.Cells["Dpi"].Value.ToString();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
