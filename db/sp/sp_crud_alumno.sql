@@ -4,8 +4,8 @@ ALTER PROCEDURE sp_crud_alumno
    @action VARCHAR(3) = NULL,
    @AlumnoId INT = NULL,
    @Carnet VARCHAR(50) = NULL,
-   @Nombre VARCHAR(25) = NULL,
-   @Telefono VARCHAR(25) = NULL,
+   @Nombre VARCHAR(50) = NULL,
+   @Telefono VARCHAR(50) = NULL,
    @SeccionId INT = NULL
 AS
 BEGIN
