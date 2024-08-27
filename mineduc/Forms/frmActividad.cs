@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace mineduc.Forms
 {
@@ -61,16 +62,14 @@ namespace mineduc.Forms
             cmbSeccion.DataSource = cmb.getSecciones();
             cmbSeccion.DisplayMember = "Nombre";
             cmbSeccion.ValueMember = "SeccionId";
-
-            seccionId = Convert.ToInt32(cmbSeccion.SelectedValue);
         }
         #endregion
 
         #region "Obteniendo y llenando combobox de tipo de alumnos"
-        private void getAlumnos()
+        private void getAlumnos(int seccion)
         {
             ComboData cmb = new ComboData();
-            cmbAlumno.DataSource = cmb.getAlumnos(seccionId);
+            cmbAlumno.DataSource = cmb.getAlumnos(seccion);
             cmbAlumno.DisplayMember = "Nombre";
             cmbAlumno.ValueMember = "AlumnoId";
         }
@@ -89,7 +88,7 @@ namespace mineduc.Forms
             cmbAlumno.Text = string.Empty;
             getTipoActividad();
             getSecciones();
-            getAlumnos();
+            getAlumnos(0);
         }
         #endregion
         public frmActividad()
@@ -102,7 +101,7 @@ namespace mineduc.Forms
             getActividades(null);
             getTipoActividad();
             getSecciones();
-            getAlumnos();
+            getAlumnos(0);
         }
 
         private void gridActividades_DoubleClick(object sender, EventArgs e)
@@ -124,6 +123,7 @@ namespace mineduc.Forms
             MessageBox.Show("Actividad creada con éxito");
             cleanFields();
             getActividades(null);
+            cmbAlumno.Text = string.Empty;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -139,6 +139,7 @@ namespace mineduc.Forms
                 cleanFields();
                 MessageBox.Show("La actividad se editó con éxito");
                 getActividades(null);
+                cmbAlumno.Text = string.Empty;
             }
         }
 
@@ -159,6 +160,7 @@ namespace mineduc.Forms
                     cleanFields();
                     MessageBox.Show("La actividad se eliminó con éxito");
                     getActividades(null);
+                    cmbAlumno.Text = string.Empty;
                 }
                 else
                 {
@@ -188,11 +190,19 @@ namespace mineduc.Forms
             }
         }
 
-        private void cmbSeccion_Click(object sender, EventArgs e)
+        private void cmbSeccion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            getSecciones();
-            getAlumnos();
-            seccionId = 0;
+
+            int seccion;
+            seccion = 0;
+
+            if (int.TryParse(cmbSeccion.SelectedValue.ToString(), out seccion))
+            {
+                seccion = Convert.ToInt32(cmbSeccion.SelectedValue.ToString());
+                cmbAlumno.Text = string.Empty;
+                getAlumnos(seccion);
+            }
+
         }
     }
 }

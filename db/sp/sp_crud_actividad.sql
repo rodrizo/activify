@@ -34,7 +34,7 @@ BEGIN
 	IF (@action = 'U') --Update
 	BEGIN
 		UPDATE Actividad
-		SET Nombre = @nombre, Fecha = @fecha, Monto = @monto, Observaciones = @observaciones, TipoActividadId = @tipoActividadId, SeccionId = @seccionId, AlumnoId = @alumnoId
+		SET Nombre = @nombre, Fecha = @fecha, Monto = @monto, Observaciones = @observaciones, TipoActividadId = @tipoActividadId, SeccionId = @seccionId, AlumnoId = @alumnoId, LastModifiedDate = GETDATE()
 		WHERE ActividadId = @actividadId
 	END
 	

@@ -1,4 +1,5 @@
-.vs
-mineduc/App.config
-packages
-.gitignore
+/.vs
+/mineduc/App.config
+/mineduc/bin/
+.csproj
+/mineduc/obj/
