@@ -42,7 +42,7 @@ namespace mineduc.Controllers
                 return ds;
             }
         }
-        public void ActividadCRUD(Actividad act, string action)
+        public string ActividadCRUD(Actividad act, string action)
         {
             Conexion cn = new Conexion();
             using (SqlConnection connection = new SqlConnection(cn.conStrin("dbActivify")))
@@ -80,15 +80,15 @@ namespace mineduc.Controllers
                             command.Parameters.Add(new SqlParameter("@actividadId", act.ActividadId));
                         }
                         command.ExecuteNonQuery();
+                        return "1";
                     }
-
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    //MessageBox.Show(ex.Message);
+                    return "0";
                 }
             }
-
         }
     }
 }

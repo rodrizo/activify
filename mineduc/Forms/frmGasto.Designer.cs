@@ -60,9 +60,11 @@
             this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.btnGuardar);
-            this.groupBox1.Location = new System.Drawing.Point(138, 15);
+            this.groupBox1.Location = new System.Drawing.Point(123, 12);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1201, 757);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1068, 606);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gastos";
@@ -70,9 +72,11 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnFactura);
-            this.groupBox3.Location = new System.Drawing.Point(97, 529);
+            this.groupBox3.Location = new System.Drawing.Point(86, 423);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1003, 162);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(892, 130);
             this.groupBox3.TabIndex = 29;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Opciones";
@@ -80,11 +84,12 @@
             // btnFactura
             // 
             this.btnFactura.ForeColor = System.Drawing.Color.Black;
-            this.btnFactura.Location = new System.Drawing.Point(352, 64);
+            this.btnFactura.Location = new System.Drawing.Point(313, 51);
+            this.btnFactura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFactura.Name = "btnFactura";
-            this.btnFactura.Size = new System.Drawing.Size(340, 51);
+            this.btnFactura.Size = new System.Drawing.Size(302, 41);
             this.btnFactura.TabIndex = 27;
-            this.btnFactura.Text = "Añadir Factura";
+            this.btnFactura.Text = "Añadir Comprobante";
             this.btnFactura.UseVisualStyleBackColor = true;
             this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
             // 
@@ -92,26 +97,27 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(28, 272);
+            this.label2.Location = new System.Drawing.Point(25, 218);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 27;
             this.label2.Text = "Monto";
             // 
             // txtMonto
             // 
-            this.txtMonto.Location = new System.Drawing.Point(31, 303);
+            this.txtMonto.Location = new System.Drawing.Point(28, 242);
+            this.txtMonto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Size = new System.Drawing.Size(188, 26);
+            this.txtMonto.Size = new System.Drawing.Size(168, 22);
             this.txtMonto.TabIndex = 26;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 59);
+            this.label1.Location = new System.Drawing.Point(22, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 36);
+            this.label1.Size = new System.Drawing.Size(84, 29);
             this.label1.TabIndex = 25;
             this.label1.Text = "Datos";
             // 
@@ -141,21 +147,23 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridGastos.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridGastos.EnableHeadersVisualStyles = false;
-            this.gridGastos.Location = new System.Drawing.Point(321, 59);
+            this.gridGastos.Location = new System.Drawing.Point(285, 47);
+            this.gridGastos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridGastos.Name = "gridGastos";
             this.gridGastos.RowHeadersVisible = false;
             this.gridGastos.RowHeadersWidth = 62;
             this.gridGastos.RowTemplate.Height = 28;
-            this.gridGastos.Size = new System.Drawing.Size(696, 300);
+            this.gridGastos.Size = new System.Drawing.Size(619, 240);
             this.gridGastos.TabIndex = 13;
             this.gridGastos.DoubleClick += new System.EventHandler(this.gridGastos_DoubleClick);
             // 
             // btnEliminar
             // 
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.Location = new System.Drawing.Point(839, 391);
+            this.btnEliminar.Location = new System.Drawing.Point(746, 313);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(178, 51);
+            this.btnEliminar.Size = new System.Drawing.Size(158, 41);
             this.btnEliminar.TabIndex = 24;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -165,18 +173,19 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.ForeColor = System.Drawing.Color.Black;
-            this.lblName.Location = new System.Drawing.Point(27, 125);
+            this.lblName.Location = new System.Drawing.Point(24, 100);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(92, 20);
+            this.lblName.Size = new System.Drawing.Size(79, 16);
             this.lblName.TabIndex = 15;
             this.lblName.Text = "Descripción";
             // 
             // btnEdit
             // 
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Location = new System.Drawing.Point(584, 391);
+            this.btnEdit.Location = new System.Drawing.Point(519, 313);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(178, 51);
+            this.btnEdit.Size = new System.Drawing.Size(158, 41);
             this.btnEdit.TabIndex = 23;
             this.btnEdit.Text = "Editar";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -184,18 +193,20 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(30, 155);
+            this.txtDescripcion.Location = new System.Drawing.Point(27, 124);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(188, 86);
+            this.txtDescripcion.Size = new System.Drawing.Size(168, 70);
             this.txtDescripcion.TabIndex = 14;
             // 
             // btnGuardar
             // 
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Location = new System.Drawing.Point(321, 391);
+            this.btnGuardar.Location = new System.Drawing.Point(285, 313);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(178, 51);
+            this.btnGuardar.Size = new System.Drawing.Size(158, 41);
             this.btnGuardar.TabIndex = 22;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -203,10 +214,11 @@
             // 
             // frmGasto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1470, 866);
+            this.ClientSize = new System.Drawing.Size(1307, 693);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmGasto";
             this.Text = "Gastos";
             this.Load += new System.EventHandler(this.frmGasto_Load);

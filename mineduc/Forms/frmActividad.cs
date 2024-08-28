@@ -114,6 +114,7 @@ namespace mineduc.Forms
             cmbActividad.Text = gridActividades.CurrentRow.Cells["Actividad"].Value.ToString();
             cmbSeccion.Text = gridActividades.CurrentRow.Cells["Seccion"].Value.ToString();
             cmbAlumno.Text = gridActividades.CurrentRow.Cells["Alumno Responsable"].Value.ToString();
+            txtMontoDisponible.Text = gridActividades.CurrentRow.Cells["Monto Disponible"].Value.ToString();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -128,6 +129,7 @@ namespace mineduc.Forms
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            string result;
             if (Id == 0)
             {
                 MessageBox.Show("No se seleccionó ninguna actividad");
@@ -135,9 +137,18 @@ namespace mineduc.Forms
             else
             {
                 getData();
-                actData.ActividadCRUD(act, "U");
+                //actData.ActividadCRUD(act, "U");
+                result = actData.ActividadCRUD(act, "U");
                 cleanFields();
-                MessageBox.Show("La actividad se editó con éxito");
+
+                if (result == "1")
+                {
+                    MessageBox.Show("La actividad se editó con éxito");
+                }
+                else
+                {
+                    MessageBox.Show("El monto disponible no puede quedar en valores negativos.");
+                }
                 getActividades(null);
                 cmbAlumno.Text = string.Empty;
             }

@@ -34,7 +34,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnActividades = new System.Windows.Forms.Button();
             this.btnSeccion = new System.Windows.Forms.Button();
-            this.btnEscuela = new System.Windows.Forms.Button();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnProfesor = new System.Windows.Forms.Button();
@@ -95,7 +94,7 @@
             this.btnActividades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActividades.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActividades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActividades.Location = new System.Drawing.Point(0, 379);
+            this.btnActividades.Location = new System.Drawing.Point(0, 241);
             this.btnActividades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActividades.Name = "btnActividades";
             this.btnActividades.Size = new System.Drawing.Size(361, 147);
@@ -111,7 +110,7 @@
             this.btnSeccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeccion.Location = new System.Drawing.Point(0, 232);
+            this.btnSeccion.Location = new System.Drawing.Point(0, 94);
             this.btnSeccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeccion.Name = "btnSeccion";
             this.btnSeccion.Size = new System.Drawing.Size(361, 147);
@@ -119,22 +118,6 @@
             this.btnSeccion.Text = "Sección";
             this.btnSeccion.UseVisualStyleBackColor = true;
             this.btnSeccion.Click += new System.EventHandler(this.btnSeccion_Click);
-            // 
-            // btnEscuela
-            // 
-            this.btnEscuela.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEscuela.FlatAppearance.BorderSize = 0;
-            this.btnEscuela.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEscuela.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEscuela.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEscuela.Location = new System.Drawing.Point(0, 94);
-            this.btnEscuela.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEscuela.Name = "btnEscuela";
-            this.btnEscuela.Size = new System.Drawing.Size(361, 138);
-            this.btnEscuela.TabIndex = 1;
-            this.btnEscuela.Text = "Escuela";
-            this.btnEscuela.UseVisualStyleBackColor = true;
-            this.btnEscuela.Click += new System.EventHandler(this.btnEscuela_Click);
             // 
             // panelDesktopPane
             // 
@@ -152,7 +135,6 @@
             this.panelMenu.Controls.Add(this.btnProfesor);
             this.panelMenu.Controls.Add(this.btnActividades);
             this.panelMenu.Controls.Add(this.btnSeccion);
-            this.panelMenu.Controls.Add(this.btnEscuela);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -168,7 +150,7 @@
             this.btnProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfesor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfesor.Location = new System.Drawing.Point(0, 526);
+            this.btnProfesor.Location = new System.Drawing.Point(0, 388);
             this.btnProfesor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProfesor.Name = "btnProfesor";
             this.btnProfesor.Size = new System.Drawing.Size(361, 138);
@@ -204,7 +186,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnActividades;
         private System.Windows.Forms.Button btnSeccion;
-        private System.Windows.Forms.Button btnEscuela;
         private System.Windows.Forms.Panel panelDesktopPane;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.PictureBox pictureBox1;

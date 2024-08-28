@@ -14,27 +14,27 @@ namespace mineduc.Forms
 {
     public partial class frmResultados : Form
     {
-        Comite com = new Comite();
-        ComiteData comData = new ComiteData();
+        //Comite com = new Comite();
+        //ComiteData comData = new ComiteData();
 
-        public frmResultados(int idComite)
+        public frmResultados()
         {
-            com.IdComite = idComite;
+            //com.IdComite = idComite;
             InitializeComponent();
         }
 
         #region "Llenando grid de resultados"
         private void getPersonas()
         {
-            DataSet ds = comData.getResultados(com, "M");
-            gridResults.DataSource = ds;
-            gridResults.DataMember = "Comite";
+            //DataSet ds = comData.getResultados(com, "M");
+            //gridResults.DataSource = ds;
+            //gridResults.DataMember = "Comite";
         }
         #endregion
 
         private void frmResultados_Load(object sender, EventArgs e)
         {
-            getPersonas();
+            //getPersonas();
         }
     }
 }

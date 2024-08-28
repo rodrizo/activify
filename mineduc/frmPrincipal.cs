@@ -87,11 +87,6 @@ namespace mineduc
             childForm.Show();
         }
 
-        private void btnEscuela_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new mineduc.Forms.frmEscuela(), sender);
-        }
-
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
 

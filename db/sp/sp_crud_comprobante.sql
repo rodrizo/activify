@@ -1,11 +1,6 @@
 
 USE [ACTIVIFY]
 GO
-/*
-Creador: Rodney Rizo
-Funcionalidad: SP para realizar CRUD de facturas
-*/
-
 CREATE PROCEDURE sp_crud_comprobante
    @action VARCHAR(3) = NULL,
    @ComprobanteId INT = NULL,

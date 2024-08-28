@@ -22,20 +22,50 @@ BEGIN
 	
 	IF (@action = 'R') --Read
 	BEGIN
-		SELECT a.ActividadId [Id], a.Nombre, a.Fecha, a.Monto, a.Observaciones, ta.Descripcion [Actividad], CONCAT(s.Grado, ' - ', s.Aula) [Seccion], al.Nombre [Alumno Responsable]
+		SELECT 
+			a.ActividadId [Id], 
+			a.Nombre, 
+			a.Fecha, 
+			a.Monto, 
+			a.Observaciones, 
+			ta.Descripcion [Actividad], 
+			CONCAT(s.Grado, ' - ', s.Aula) [Seccion], 
+			al.Nombre [Alumno Responsable], 
+			(a.Monto - ISNULL(SUM(g.Monto), 0)) [Monto Disponible]
 		FROM Actividad a WITH(NOLOCK)  
 		INNER JOIN Seccion s WITH(NOLOCK) ON s.SeccionId = a.SeccionId
 		INNER JOIN Profesor p WITH(NOLOCK) ON p.ProfesorId = s.ProfesorId
 		INNER JOIN TipoActividad ta WITH(NOLOCK) ON ta.TipoActividadId = a.TipoActividadId
 		LEFT JOIN Alumno al WITH(NOLOCK) ON al.AlumnoId = a.AlumnoId
+		LEFT JOIN Gasto g WITH(NOLOCK) ON g.ActividadId = a.ActividadId
 		WHERE a.SeccionId = ISNULL(@seccionId, a.SeccionId)
+		GROUP BY a.ActividadId, a.Nombre, a.Fecha, a.Monto, a.Observaciones, ta.Descripcion, CONCAT(s.Grado, ' - ', s.Aula), al.Nombre
 	END
 	
 	IF (@action = 'U') --Update
 	BEGIN
-		UPDATE Actividad
-		SET Nombre = @nombre, Fecha = @fecha, Monto = @monto, Observaciones = @observaciones, TipoActividadId = @tipoActividadId, SeccionId = @seccionId, AlumnoId = @alumnoId, LastModifiedDate = GETDATE()
-		WHERE ActividadId = @actividadId
+
+		DECLARE @resultado DECIMAL(10,2);
+
+		SELECT 
+			@resultado = CONVERT(DECIMAL(10,2), (a.Monto - ISNULL(SUM(g.Monto), 0)))
+		FROM Actividad a WITH(NOLOCK)  
+		INNER JOIN Gasto g WITH(NOLOCK) ON g.ActividadId = a.ActividadId
+		WHERE a.ActividadId = ISNULL(@actividadId, a.ActividadId)
+		GROUP BY a.Monto
+
+		IF(@resultado >= 0)
+		BEGIN
+			UPDATE Actividad
+			SET Nombre = @nombre, Fecha = @fecha, Monto = @monto, Observaciones = @observaciones, TipoActividadId = @tipoActividadId, SeccionId = @seccionId, AlumnoId = @alumnoId, LastModifiedDate = GETDATE()
+			WHERE ActividadId = @actividadId
+		END
+		ELSE
+		BEGIN
+			RAISERROR('El monto disponible no puede quedar en valores negativos.', 16, 1)
+
+		END
+		
 	END
 	
 	IF (@action = 'D') --DELETE

@@ -117,7 +117,7 @@ namespace mineduc.Forms
             }
             else
             {
-                frmFactura frm = new frmFactura(gas.IdGasto);
+                frmComprobante frm = new frmComprobante(gas.IdGasto);
                 frm.Show();
             }
         }

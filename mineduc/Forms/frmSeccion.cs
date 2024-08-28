@@ -163,8 +163,8 @@ namespace mineduc.Forms
             }
             else
             {
-                frmResultados frm = new frmResultados(cm.SeccionId);
-                frm.Show();
+                //frmResultados frm = new frmResultados(cm.SeccionId);
+                //frm.Show();
             }
         }
     }

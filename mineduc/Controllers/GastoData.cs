@@ -17,7 +17,7 @@ namespace mineduc.Controllers
         {
             Conexion cn = new Conexion();
             DataSet ds = new DataSet();
-            using (SqlConnection connection = new SqlConnection(cn.conStrin("dbMineduc")))
+            using (SqlConnection connection = new SqlConnection(cn.conStrin("dbActivify")))
             {
                 try
                 {
