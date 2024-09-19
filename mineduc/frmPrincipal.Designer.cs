@@ -83,9 +83,9 @@
             this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(455, 30);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(328, 32);
+            this.lblTitle.Size = new System.Drawing.Size(110, 32);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Ministerio de educación";
+            this.lblTitle.Text = "Activify";
             // 
             // btnActividades
             // 
