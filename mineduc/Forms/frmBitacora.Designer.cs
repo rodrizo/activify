@@ -43,14 +43,19 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.groupBox1.Controls.Add(this.cmbAcciones);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.gridBitacoras);
             this.groupBox1.Controls.Add(this.btnGuardar);
-            this.groupBox1.Location = new System.Drawing.Point(34, 124);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Location = new System.Drawing.Point(30, 99);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1056, 623);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(939, 498);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bitácora";
@@ -58,18 +63,19 @@
             // cmbAcciones
             // 
             this.cmbAcciones.FormattingEnabled = true;
-            this.cmbAcciones.Location = new System.Drawing.Point(18, 156);
+            this.cmbAcciones.Location = new System.Drawing.Point(16, 125);
+            this.cmbAcciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbAcciones.Name = "cmbAcciones";
-            this.cmbAcciones.Size = new System.Drawing.Size(188, 28);
+            this.cmbAcciones.Size = new System.Drawing.Size(168, 29);
             this.cmbAcciones.TabIndex = 32;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(14, 119);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(12, 95);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 20);
+            this.label3.Size = new System.Drawing.Size(69, 21);
             this.label3.TabIndex = 31;
             this.label3.Text = "Acción";
             // 
@@ -77,9 +83,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(499, 41);
+            this.label1.Location = new System.Drawing.Point(444, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 36);
+            this.label1.Size = new System.Drawing.Size(168, 29);
             this.label1.TabIndex = 25;
             this.label1.Text = "Movimientos";
             // 
@@ -93,7 +99,7 @@
             this.gridBitacoras.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -102,27 +108,29 @@
             this.gridBitacoras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridBitacoras.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridBitacoras.EnableHeadersVisualStyles = false;
-            this.gridBitacoras.Location = new System.Drawing.Point(222, 99);
+            this.gridBitacoras.Location = new System.Drawing.Point(197, 79);
+            this.gridBitacoras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridBitacoras.Name = "gridBitacoras";
             this.gridBitacoras.RowHeadersVisible = false;
             this.gridBitacoras.RowHeadersWidth = 62;
             this.gridBitacoras.RowTemplate.Height = 28;
-            this.gridBitacoras.Size = new System.Drawing.Size(730, 374);
+            this.gridBitacoras.Size = new System.Drawing.Size(649, 299);
             this.gridBitacoras.TabIndex = 13;
             // 
             // btnGuardar
             // 
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Location = new System.Drawing.Point(463, 491);
+            this.btnGuardar.Location = new System.Drawing.Point(412, 393);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(265, 80);
+            this.btnGuardar.Size = new System.Drawing.Size(236, 64);
             this.btnGuardar.TabIndex = 22;
             this.btnGuardar.Text = "Ver";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -130,10 +138,12 @@
             // 
             // frmBitacora
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1209, 788);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.ClientSize = new System.Drawing.Size(1075, 630);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmBitacora";
             this.Text = "Bitacora";
             this.Load += new System.EventHandler(this.frmBitacora_Load);

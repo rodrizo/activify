@@ -111,5 +111,15 @@ namespace mineduc
         {
             OpenChildForm(new mineduc.Forms.frmSeccion(), sender);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -67,7 +67,9 @@
             this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.txtGrado);
             this.groupBox1.Controls.Add(this.btnGuardar);
-            this.groupBox1.Location = new System.Drawing.Point(30, 108);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Location = new System.Drawing.Point(39, 110);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -80,7 +82,7 @@
             // btnVer
             // 
             this.btnVer.ForeColor = System.Drawing.Color.Black;
-            this.btnVer.Location = new System.Drawing.Point(285, 313);
+            this.btnVer.Location = new System.Drawing.Point(359, 323);
             this.btnVer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVer.Name = "btnVer";
             this.btnVer.Size = new System.Drawing.Size(126, 41);
@@ -93,6 +95,7 @@
             // 
             this.groupBox3.Controls.Add(this.btnResult);
             this.groupBox3.Controls.Add(this.btnPersona);
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox3.Location = new System.Drawing.Point(86, 423);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
@@ -129,38 +132,38 @@
             // cmbProfesores
             // 
             this.cmbProfesores.FormattingEnabled = true;
-            this.cmbProfesores.Location = new System.Drawing.Point(86, 200);
+            this.cmbProfesores.Location = new System.Drawing.Point(118, 199);
             this.cmbProfesores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbProfesores.Name = "cmbProfesores";
-            this.cmbProfesores.Size = new System.Drawing.Size(168, 24);
+            this.cmbProfesores.Size = new System.Drawing.Size(209, 29);
             this.cmbProfesores.TabIndex = 30;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(23, 202);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 16);
+            this.label3.Size = new System.Drawing.Size(75, 21);
             this.label3.TabIndex = 29;
             this.label3.Text = "Profesor";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(23, 162);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 16);
+            this.label2.Size = new System.Drawing.Size(48, 21);
             this.label2.TabIndex = 27;
             this.label2.Text = "Aula";
             // 
             // txtAula
             // 
-            this.txtAula.Location = new System.Drawing.Point(86, 162);
+            this.txtAula.Location = new System.Drawing.Point(118, 161);
             this.txtAula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAula.Name = "txtAula";
-            this.txtAula.Size = new System.Drawing.Size(168, 22);
+            this.txtAula.Size = new System.Drawing.Size(209, 28);
             this.txtAula.TabIndex = 26;
             // 
             // label1
@@ -183,7 +186,7 @@
             this.gridSecciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -192,14 +195,14 @@
             this.gridSecciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridSecciones.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridSecciones.EnableHeadersVisualStyles = false;
-            this.gridSecciones.Location = new System.Drawing.Point(285, 47);
+            this.gridSecciones.Location = new System.Drawing.Point(359, 57);
             this.gridSecciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridSecciones.Name = "gridSecciones";
             this.gridSecciones.RowHeadersVisible = false;
@@ -212,7 +215,7 @@
             // btnEliminar
             // 
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.Location = new System.Drawing.Point(767, 313);
+            this.btnEliminar.Location = new System.Drawing.Point(841, 323);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(137, 41);
@@ -224,17 +227,17 @@
             // lblGrado
             // 
             this.lblGrado.AutoSize = true;
-            this.lblGrado.ForeColor = System.Drawing.Color.Black;
+            this.lblGrado.ForeColor = System.Drawing.Color.White;
             this.lblGrado.Location = new System.Drawing.Point(23, 122);
             this.lblGrado.Name = "lblGrado";
-            this.lblGrado.Size = new System.Drawing.Size(45, 16);
+            this.lblGrado.Size = new System.Drawing.Size(65, 21);
             this.lblGrado.TabIndex = 15;
             this.lblGrado.Text = "Grado";
             // 
             // btnEdit
             // 
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Location = new System.Drawing.Point(605, 313);
+            this.btnEdit.Location = new System.Drawing.Point(679, 323);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(124, 41);
@@ -245,16 +248,16 @@
             // 
             // txtGrado
             // 
-            this.txtGrado.Location = new System.Drawing.Point(86, 119);
+            this.txtGrado.Location = new System.Drawing.Point(118, 118);
             this.txtGrado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGrado.Name = "txtGrado";
-            this.txtGrado.Size = new System.Drawing.Size(168, 22);
+            this.txtGrado.Size = new System.Drawing.Size(209, 28);
             this.txtGrado.TabIndex = 14;
             // 
             // btnGuardar
             // 
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Location = new System.Drawing.Point(444, 313);
+            this.btnGuardar.Location = new System.Drawing.Point(518, 323);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(125, 41);
@@ -267,6 +270,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1130, 743);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

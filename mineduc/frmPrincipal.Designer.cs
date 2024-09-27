@@ -32,11 +32,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnActividades = new System.Windows.Forms.Button();
-            this.btnSeccion = new System.Windows.Forms.Button();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnProfesor = new System.Windows.Forms.Button();
+            this.btnActividades = new System.Windows.Forms.Button();
+            this.btnSeccion = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitleBar.SuspendLayout();
@@ -68,8 +69,10 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panelTitleBar.Controls.Add(this.label1);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.ForeColor = System.Drawing.SystemColors.Control;
             this.panelTitleBar.Location = new System.Drawing.Point(361, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTitleBar.Name = "panelTitleBar";
@@ -86,38 +89,6 @@
             this.lblTitle.Size = new System.Drawing.Size(110, 32);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Activify";
-            // 
-            // btnActividades
-            // 
-            this.btnActividades.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnActividades.FlatAppearance.BorderSize = 0;
-            this.btnActividades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActividades.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActividades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActividades.Location = new System.Drawing.Point(0, 241);
-            this.btnActividades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnActividades.Name = "btnActividades";
-            this.btnActividades.Size = new System.Drawing.Size(361, 147);
-            this.btnActividades.TabIndex = 4;
-            this.btnActividades.Text = "Actividades";
-            this.btnActividades.UseVisualStyleBackColor = true;
-            this.btnActividades.Click += new System.EventHandler(this.btnActividades_Click);
-            // 
-            // btnSeccion
-            // 
-            this.btnSeccion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSeccion.FlatAppearance.BorderSize = 0;
-            this.btnSeccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeccion.Location = new System.Drawing.Point(0, 94);
-            this.btnSeccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSeccion.Name = "btnSeccion";
-            this.btnSeccion.Size = new System.Drawing.Size(361, 147);
-            this.btnSeccion.TabIndex = 2;
-            this.btnSeccion.Text = "Sección";
-            this.btnSeccion.UseVisualStyleBackColor = true;
-            this.btnSeccion.Click += new System.EventHandler(this.btnSeccion_Click);
             // 
             // panelDesktopPane
             // 
@@ -148,7 +119,9 @@
             this.btnProfesor.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProfesor.FlatAppearance.BorderSize = 0;
             this.btnProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfesor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnProfesor.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnProfesor.Image = global::mineduc.Properties.Resources.Profesor;
             this.btnProfesor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProfesor.Location = new System.Drawing.Point(0, 388);
             this.btnProfesor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -158,6 +131,55 @@
             this.btnProfesor.Text = "Profesor";
             this.btnProfesor.UseVisualStyleBackColor = true;
             this.btnProfesor.Click += new System.EventHandler(this.btnProfesor_Click);
+            // 
+            // btnActividades
+            // 
+            this.btnActividades.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnActividades.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnActividades.FlatAppearance.BorderSize = 0;
+            this.btnActividades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActividades.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnActividades.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnActividades.Image = global::mineduc.Properties.Resources.Activdad;
+            this.btnActividades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActividades.Location = new System.Drawing.Point(0, 241);
+            this.btnActividades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnActividades.Name = "btnActividades";
+            this.btnActividades.Size = new System.Drawing.Size(361, 147);
+            this.btnActividades.TabIndex = 4;
+            this.btnActividades.Text = "Actividades";
+            this.btnActividades.UseVisualStyleBackColor = true;
+            this.btnActividades.Click += new System.EventHandler(this.btnActividades_Click);
+            // 
+            // btnSeccion
+            // 
+            this.btnSeccion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSeccion.FlatAppearance.BorderSize = 0;
+            this.btnSeccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSeccion.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSeccion.Image = global::mineduc.Properties.Resources.Seccion;
+            this.btnSeccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeccion.Location = new System.Drawing.Point(0, 94);
+            this.btnSeccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSeccion.Name = "btnSeccion";
+            this.btnSeccion.Size = new System.Drawing.Size(361, 147);
+            this.btnSeccion.TabIndex = 2;
+            this.btnSeccion.Text = "Sección";
+            this.btnSeccion.UseVisualStyleBackColor = true;
+            this.btnSeccion.Click += new System.EventHandler(this.btnSeccion_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1026, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 29);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Salir";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmPrincipal
             // 
@@ -188,8 +210,9 @@
         private System.Windows.Forms.Button btnSeccion;
         private System.Windows.Forms.Panel panelDesktopPane;
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnProfesor;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
