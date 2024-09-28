@@ -31,13 +31,13 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnProfesor = new System.Windows.Forms.Button();
             this.btnActividades = new System.Windows.Forms.Button();
             this.btnSeccion = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitleBar.SuspendLayout();
@@ -58,10 +58,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::mineduc.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(96, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(121, 4);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 64);
+            this.pictureBox1.Size = new System.Drawing.Size(122, 83);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -78,6 +78,18 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(1220, 94);
             this.panelTitleBar.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1026, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 29);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Salir";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblTitle
             // 
@@ -168,18 +180,6 @@
             this.btnSeccion.Text = "Sección";
             this.btnSeccion.UseVisualStyleBackColor = true;
             this.btnSeccion.Click += new System.EventHandler(this.btnSeccion_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1026, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 29);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Salir";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmPrincipal
             // 

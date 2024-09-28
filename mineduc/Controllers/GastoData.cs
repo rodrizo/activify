@@ -46,7 +46,7 @@ namespace mineduc.Controllers
         public void GastoCRUD(Gasto gas, string action)
         {
             Conexion cn = new Conexion();
-            using (SqlConnection connection = new SqlConnection(cn.conStrin("dbMineduc")))
+            using (SqlConnection connection = new SqlConnection(cn.conStrin("dbActivify")))
             {
                 try
                 {
