@@ -1,7 +1,6 @@
 USE [ACTIVIFY]
 GO
-
-ALTER PROCEDURE sp_crud_actividad
+ALTER PROCEDURE [dbo].[sp_crud_actividad]
    @action VARCHAR(3) = NULL,
    @actividadId INT = NULL,
    @nombre VARCHAR(250) = NULL,
@@ -17,7 +16,7 @@ BEGIN
 	
 	IF (@action = 'C') --Create
 	BEGIN
-		INSERT INTO Actividad VALUES(@nombre, @fecha, @monto, @observaciones, GETDATE(), @tipoActividadId, @seccionId, @alumnoId)
+		INSERT INTO Actividad VALUES(@nombre, @fecha, @monto, @observaciones, GETDATE(), @tipoActividadId, @seccionId, @alumnoId, 1)
 	END
 	
 	IF (@action = 'R') --Read
@@ -39,6 +38,7 @@ BEGIN
 		LEFT JOIN Alumno al WITH(NOLOCK) ON al.AlumnoId = a.AlumnoId
 		LEFT JOIN Gasto g WITH(NOLOCK) ON g.ActividadId = a.ActividadId
 		WHERE a.SeccionId = ISNULL(@seccionId, a.SeccionId)
+		AND a.IsActive = 1
 		GROUP BY a.ActividadId, a.Nombre, a.Fecha, a.Monto, a.Observaciones, ta.Descripcion, CONCAT(s.Grado, ' - ', s.Aula), al.Nombre
 	END
 	
@@ -48,10 +48,11 @@ BEGIN
 		DECLARE @resultado DECIMAL(10,2);
 
 		SELECT 
-			@resultado = CONVERT(DECIMAL(10,2), (a.Monto - ISNULL(SUM(g.Monto), 0)))
+			@resultado = CONVERT(DECIMAL(10,2), (@monto - ISNULL(SUM(g.Monto), 0)))
 		FROM Actividad a WITH(NOLOCK)  
 		INNER JOIN Gasto g WITH(NOLOCK) ON g.ActividadId = a.ActividadId
 		WHERE a.ActividadId = ISNULL(@actividadId, a.ActividadId)
+		AND a.IsActive = 1
 		GROUP BY a.Monto
 
 		IF(@resultado >= 0)
@@ -70,7 +71,8 @@ BEGIN
 	
 	IF (@action = 'D') --DELETE
 	BEGIN
-		DELETE Actividad WHERE ActividadId = @actividadId
+		UPDATE Actividad SET IsActive = 0 WHERE ActividadId = @actividadId
+		--DELETE Actividad WHERE ActividadId = @actividadId
 	END
 
 	

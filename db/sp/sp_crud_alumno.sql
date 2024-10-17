@@ -1,6 +1,6 @@
 USE [ACTIVIFY]
 GO
-ALTER PROCEDURE sp_crud_alumno
+ALTER PROCEDURE [dbo].[sp_crud_alumno]
    @action VARCHAR(3) = NULL,
    @AlumnoId INT = NULL,
    @Carnet VARCHAR(50) = NULL,
@@ -13,7 +13,7 @@ BEGIN
 	
 	IF (@action = 'C') --Create
 	BEGIN
-		INSERT INTO Alumno VALUES(@Carnet, @Nombre,@Telefono, @SeccionId)
+		INSERT INTO Alumno VALUES(@Carnet, @Nombre,@Telefono, @SeccionId, 1)
 	END
 	
 	IF (@action = 'R') --Read
@@ -22,6 +22,7 @@ BEGIN
 		FROM Alumno a WITH(NOLOCK)  
 		INNER JOIN Seccion s WITH(NOLOCK) ON s.SeccionId = a.SeccionId
 		WHERE s.SeccionId = ISNULL(@SeccionId, a.SeccionId)
+		AND a.IsActive = 1
 	END
 	
 	IF (@action = 'U') --Update
@@ -33,7 +34,8 @@ BEGIN
 	
 	IF (@action = 'D') --DELETE
 	BEGIN
-		DELETE Alumno where AlumnoId = @AlumnoId
+		UPDATE Alumno SET IsActive = 0 FROM Alumno
+		--DELETE Alumno where AlumnoId = @AlumnoId
 	END
 
 	IF(@action <> 'R')

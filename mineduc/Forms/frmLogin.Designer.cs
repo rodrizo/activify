@@ -29,17 +29,20 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnIngresar = new System.Windows.Forms.Button();
             this.lblDpi = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.btnIngresar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.groupBox1.Controls.Add(this.btnIngresar);
             this.groupBox1.Controls.Add(this.lblDpi);
             this.groupBox1.Controls.Add(this.txtPassword);
@@ -48,14 +51,26 @@
             this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Location = new System.Drawing.Point(83, 127);
+            this.groupBox1.Location = new System.Drawing.Point(81, 141);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(419, 396);
+            this.groupBox1.Size = new System.Drawing.Size(419, 406);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.ForeColor = System.Drawing.Color.Black;
+            this.btnIngresar.Location = new System.Drawing.Point(128, 246);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(158, 41);
+            this.btnIngresar.TabIndex = 28;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // lblDpi
             // 
@@ -82,9 +97,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(29, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 29);
+            this.label1.Size = new System.Drawing.Size(310, 29);
             this.label1.TabIndex = 25;
-            this.label1.Text = "Ingrese las Credenciales";
+            this.label1.Text = "Ingrese las credenciales";
             // 
             // lblName
             // 
@@ -104,30 +119,31 @@
             this.txtName.Size = new System.Drawing.Size(226, 28);
             this.txtName.TabIndex = 14;
             // 
-            // btnIngresar
+            // pictureBox1
             // 
-            this.btnIngresar.ForeColor = System.Drawing.Color.Black;
-            this.btnIngresar.Location = new System.Drawing.Point(128, 246);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(158, 41);
-            this.btnIngresar.TabIndex = 28;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.pictureBox1.Image = global::mineduc.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(236, 33);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(122, 83);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(587, 644);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLogin";
             this.Text = "Login";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -141,5 +157,6 @@
         private System.Windows.Forms.Label lblDpi;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

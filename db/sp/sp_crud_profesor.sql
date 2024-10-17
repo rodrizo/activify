@@ -1,6 +1,6 @@
 USE ACTIVIFY
 GO
-CREATE PROCEDURE sp_crud_profesor
+ALTER PROCEDURE [dbo].[sp_crud_profesor]
    @action VARCHAR(3) = NULL,
    @profesorId INT = NULL,
    @nombre VARCHAR(50) = NULL,
@@ -13,13 +13,14 @@ BEGIN
 	
 	IF (@action = 'C') --Create
 	BEGIN
-		INSERT INTO Profesor VALUES(@nombre, @email, @telefono, @dpi)
+		INSERT INTO Profesor VALUES(@nombre, @email, @telefono, @dpi, 1)
 	END
 	
 	IF (@action = 'R') --Read
 	BEGIN
 		SELECT p.ProfesorId [Id], p.Nombre, p.Email, p.Telefono, p.DPI
 		FROM Profesor p WITH(NOLOCK)  
+		WHERE p.IsActive = 1
 	END
 	
 	IF (@action = 'U') --Update
@@ -31,7 +32,7 @@ BEGIN
 	
 	IF (@action = 'D') --DELETE
 	BEGIN
-		DELETE Profesor where ProfesorId = @profesorId
+		UPDATE Profesor SET IsActive = 0 WHERE ProfesorId = @profesorId
 	END
 	
 	

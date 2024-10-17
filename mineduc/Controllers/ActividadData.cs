@@ -86,7 +86,7 @@ namespace mineduc.Controllers
                 catch (Exception ex)
                 {
                     //MessageBox.Show(ex.Message);
-                    return "0";
+                    return ex.Message.ToString();
                 }
             }
         }

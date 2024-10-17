@@ -147,7 +147,7 @@ namespace mineduc.Forms
                 }
                 else
                 {
-                    MessageBox.Show("El monto disponible no puede quedar en valores negativos.");
+                    MessageBox.Show(result);
                 }
                 getActividades(null);
                 cmbAlumno.Text = string.Empty;

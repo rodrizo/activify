@@ -59,15 +59,28 @@ namespace mineduc.Forms
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+
+            string result;
+
             getData();
-            gasData.GastoCRUD(gas, "C");
-            MessageBox.Show("Gasto creado con éxito");
+            result = gasData.GastoCRUD(gas, "C");
             cleanFields();
-            getGastos();
+
+            if (result == "1")
+            {
+                MessageBox.Show("Gasto creado con éxito");
+                getGastos();
+            }
+            else
+            {
+                MessageBox.Show(result);
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            string result;
+
             if (Id == 0)
             {
                 MessageBox.Show("No se seleccionó ningún gasto");
@@ -75,10 +88,18 @@ namespace mineduc.Forms
             else
             {
                 getData();
-                gasData.GastoCRUD(gas, "U");
+                result = gasData.GastoCRUD(gas, "U");
                 cleanFields();
-                MessageBox.Show("El gasto se editó con éxito");
-                getGastos();
+
+                if (result == "1")
+                {
+                    MessageBox.Show("El gasto se editó con éxito");
+                    getGastos();
+                }
+                else
+                {
+                    MessageBox.Show(result);
+                }
             }
         }
 

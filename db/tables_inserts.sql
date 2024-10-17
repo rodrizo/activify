@@ -9,7 +9,8 @@ CREATE TABLE Profesor(
 	Nombre VARCHAR(50),
 	Email VARCHAR(50),
 	Telefono VARCHAR(50),
-	DPI VARCHAR(50)
+	DPI VARCHAR(50),
+	IsActive BIT
 );
 
 CREATE TABLE TipoActividad(
@@ -21,6 +22,7 @@ CREATE TABLE Seccion(
 	SeccionId INT IDENTITY PRIMARY KEY,
 	Grado VARCHAR(75),
 	Aula VARCHAR(10),
+	IsActive BIT,
 	ProfesorId INT FOREIGN KEY REFERENCES Profesor(ProfesorId)
 );
 
@@ -33,7 +35,8 @@ CREATE TABLE Actividad(
 	LastModifiedDate DATETIME,
 	TipoActividadId INT FOREIGN KEY REFERENCES TipoActividad(TipoActividadId),
 	SeccionId INT FOREIGN KEY REFERENCES Seccion(SeccionId),
-	AlumnoId INT
+	AlumnoId INT,
+	IsActive BIT
 );
 
 CREATE TABLE Gasto(
@@ -41,7 +44,8 @@ CREATE TABLE Gasto(
 	Descripcion VARCHAR(250),
 	Monto DECIMAL(10, 2),
 	LastModifiedDate DATETIME,
-	ActividadId INT FOREIGN KEY REFERENCES Actividad(ActividadId)
+	ActividadId INT FOREIGN KEY REFERENCES Actividad(ActividadId),
+	IsActive BIT
 );
 
 CREATE TABLE Comprobante(
@@ -49,7 +53,8 @@ CREATE TABLE Comprobante(
 	Nombre VARCHAR(250),
 	Imagen IMAGE,
 	CreateDate DATETIME,
-	GastoId INT FOREIGN KEY REFERENCES Gasto(GastoId)
+	GastoId INT FOREIGN KEY REFERENCES Gasto(GastoId),
+	IsActive BIT
 );
 
 --Tables with FK
@@ -58,7 +63,8 @@ CREATE TABLE Alumno(
 	Carnet VARCHAR(50),
 	Nombre VARCHAR(50),
 	Telefono VARCHAR(50),
-	SeccionId INT FOREIGN KEY REFERENCES Seccion(SeccionId)
+	SeccionId INT FOREIGN KEY REFERENCES Seccion(SeccionId),
+	IsActive BIT
 );
 
 

@@ -1,7 +1,7 @@
 USE [ACTIVIFY]
 GO
 
-ALTER PROCEDURE sp_crud_gastos
+ALTER PROCEDURE [dbo].[sp_crud_gastos]
    @action VARCHAR(3) = NULL,
    @idGasto INT = NULL,
    @descripcion VARCHAR(250) = NULL,
@@ -13,7 +13,26 @@ BEGIN
 	
 	IF (@action = 'C') --Create
 	BEGIN
-		INSERT INTO Gasto VALUES(@descripcion, @monto, GETDATE(), @idActividad)
+	
+		DECLARE @resultado DECIMAL(10,2);
+		
+		SELECT 
+			@resultado = CONVERT(DECIMAL(10,2), (a.Monto - ISNULL(SUM(g.Monto), 0)))
+		FROM Actividad a WITH(NOLOCK)  
+		INNER JOIN Gasto g WITH(NOLOCK) ON g.ActividadId = a.ActividadId
+		WHERE a.ActividadId = ISNULL(@idActividad, a.ActividadId)
+		GROUP BY a.Monto
+
+		SET @resultado = @resultado - @monto;
+		
+		IF(@resultado >= 0)
+		BEGIN
+			INSERT INTO Gasto VALUES(@descripcion, @monto, GETDATE(), @idActividad, 1)
+		END
+		ELSE
+		BEGIN
+			RAISERROR('El presupuesto de la actividad no es suficiente. Favor introducir un gasto menor.', 16, 1)
+		END
 	END
 	
 	IF (@action = 'R') --Read
@@ -23,18 +42,39 @@ BEGIN
 		INNER JOIN Actividad a WITH(NOLOCK) ON a.ActividadId = g.ActividadId
 		INNER JOIN Seccion s WITH(NOLOCK) ON s.SeccionId = a.SeccionId
 		WHERE g.ActividadId = ISNULL(@idActividad, g.ActividadId)
+		AND g.IsActive = 1
 	END
 	
 	IF (@action = 'U') --Update
 	BEGIN
-		UPDATE Gasto
-		SET Descripcion = @descripcion, Monto = @monto
-		WHERE GastoId = @idGasto
+
+		DECLARE @resultado2 DECIMAL(10,2);
+
+		SELECT 
+			@resultado2 = CONVERT(DECIMAL(10,2), (a.Monto - ISNULL(SUM(g.Monto), 0)))
+		FROM Actividad a WITH(NOLOCK)  
+		INNER JOIN Gasto g WITH(NOLOCK) ON g.ActividadId = a.ActividadId
+		WHERE a.ActividadId = ISNULL(@idActividad, a.ActividadId)
+		GROUP BY a.Monto
+
+		SET @resultado2 = @resultado2 - @monto;
+
+		IF(@resultado2 >= 0)
+		BEGIN
+			UPDATE Gasto
+			SET Descripcion = @descripcion, Monto = @monto
+			WHERE GastoId = @idGasto
+		END
+		ELSE
+		BEGIN
+			RAISERROR('El presupuesto de la actividad no es suficiente. Favor introducir un gasto menor.', 16, 1)
+		END
+
 	END
 	
 	IF (@action = 'D') --DELETE
 	BEGIN
-		DELETE Gasto WHERE GastoId = @idGasto
+		UPDATE Gasto SET IsActive = 0 WHERE GastoId = @idGasto
 	END
 
 	IF(@action <> 'R')

@@ -134,17 +134,26 @@ namespace mineduc.Forms
 
         private void gridFacturas_DoubleClick(object sender, EventArgs e)
         {
-            Id = Convert.ToInt32(gridComprobantes.CurrentRow.Cells["Id"].Value.ToString());
+            if(gridComprobantes.CurrentRow.Cells["Id"].Value.ToString() is null ||
+                 gridComprobantes.CurrentRow.Cells["Id"].Value.ToString().Equals(""))
+            {
+                Id = 0;
+            }
+            else
+            {
+                Id = Convert.ToInt32(gridComprobantes.CurrentRow.Cells["Id"].Value.ToString());
+            }
             txtNombre.Text = gridComprobantes.CurrentRow.Cells["Nombre"].Value.ToString();
-            if (!Convert.IsDBNull((byte[])gridComprobantes.CurrentRow.Cells["Imagen"].Value))
+            if (gridComprobantes.CurrentRow.Cells["Imagen"].Value is null ||
+                gridComprobantes.CurrentRow.Cells["Imagen"].Value.ToString().Equals(""))
+            {
+                pictureBoxShow.Image = null;
+            }
+            else
             {
                 MemoryStream strm = new MemoryStream((byte[])gridComprobantes.CurrentRow.Cells["Imagen"].Value);
                 pictureBoxShow.Image = (strm == null) ? null : Image.FromStream(strm);
                 pictureBoxAdd.Image = (strm == null) ? null : Image.FromStream(strm);
-            }
-            else
-            {
-                pictureBoxShow.Image = null;
             }
         }
 

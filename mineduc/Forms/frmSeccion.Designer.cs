@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnVer = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnResult = new System.Windows.Forms.Button();
             this.btnPersona = new System.Windows.Forms.Button();
             this.cmbProfesores = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -93,7 +92,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnResult);
             this.groupBox3.Controls.Add(this.btnPersona);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox3.Location = new System.Drawing.Point(86, 423);
@@ -105,22 +103,10 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Opciones";
             // 
-            // btnResult
-            // 
-            this.btnResult.ForeColor = System.Drawing.Color.Black;
-            this.btnResult.Location = new System.Drawing.Point(484, 46);
-            this.btnResult.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnResult.Name = "btnResult";
-            this.btnResult.Size = new System.Drawing.Size(302, 41);
-            this.btnResult.TabIndex = 28;
-            this.btnResult.Text = "Ver Resultados de Mejoramiento";
-            this.btnResult.UseVisualStyleBackColor = true;
-            this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
-            // 
             // btnPersona
             // 
             this.btnPersona.ForeColor = System.Drawing.Color.Black;
-            this.btnPersona.Location = new System.Drawing.Point(107, 46);
+            this.btnPersona.Location = new System.Drawing.Point(299, 47);
             this.btnPersona.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPersona.Name = "btnPersona";
             this.btnPersona.Size = new System.Drawing.Size(302, 41);
@@ -178,30 +164,30 @@
             // 
             // gridSecciones
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.gridSecciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.gridSecciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gridSecciones.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSecciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSecciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gridSecciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridSecciones.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSecciones.DefaultCellStyle = dataGridViewCellStyle6;
             this.gridSecciones.EnableHeadersVisualStyles = false;
             this.gridSecciones.Location = new System.Drawing.Point(359, 57);
             this.gridSecciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -303,6 +289,5 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnPersona;
         private System.Windows.Forms.Button btnVer;
-        private System.Windows.Forms.Button btnResult;
     }
 }

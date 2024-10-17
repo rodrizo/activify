@@ -1,7 +1,7 @@
 
 USE [ACTIVIFY]
 GO
-CREATE PROCEDURE sp_crud_comprobante
+ALTER PROCEDURE [dbo].[sp_crud_comprobante]
    @action VARCHAR(3) = NULL,
    @ComprobanteId INT = NULL,
    @Nombre VARCHAR(50) = NULL,
@@ -13,7 +13,7 @@ BEGIN
 	
 	IF (@action = 'C') --Create
 	BEGIN
-		INSERT INTO Comprobante VALUES(@Nombre,@Imagen, GETDATE(), @GastoId)
+		INSERT INTO Comprobante VALUES(@Nombre,@Imagen, GETDATE(), @GastoId, 1)
 	END
 	
 	IF (@action = 'R') --Read
@@ -22,6 +22,7 @@ BEGIN
 		FROM Comprobante c WITH(NOLOCK)  
 		INNER JOIN Gasto g WITH(NOLOCK) ON g.GastoId = c.GastoId
 		WHERE g.GastoId = ISNULL(@GastoId, g.GastoId)
+		AND c.IsActive = 1
 	END
 	
 	IF (@action = 'U') --Update
@@ -33,7 +34,7 @@ BEGIN
 	
 	IF (@action = 'D') --DELETE
 	BEGIN
-		DELETE Comprobante where ComprobanteId = @ComprobanteId
+		UPDATE Comprobante SET IsActive = 0 WHERE ComprobanteId = @ComprobanteId
 	END
 	
 	IF (@action = 'S') --See image

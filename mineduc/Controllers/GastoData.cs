@@ -43,7 +43,7 @@ namespace mineduc.Controllers
             }
         }
 
-        public void GastoCRUD(Gasto gas, string action)
+        public string GastoCRUD(Gasto gas, string action)
         {
             Conexion cn = new Conexion();
             using (SqlConnection connection = new SqlConnection(cn.conStrin("dbActivify")))
@@ -74,12 +74,14 @@ namespace mineduc.Controllers
                             command.Parameters.Add(new SqlParameter("@idGasto", gas.IdGasto));
                         }
                         command.ExecuteNonQuery();
+                        return "1";
                     }
 
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    return ex.Message.ToString();
                 }
             }
 

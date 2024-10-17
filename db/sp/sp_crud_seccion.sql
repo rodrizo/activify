@@ -1,6 +1,6 @@
 USE [ACTIVIFY]
 GO
-CREATE PROCEDURE sp_crud_seccion
+ALTER PROCEDURE [dbo].[sp_crud_seccion]
    @action VARCHAR(3) = NULL,
    @seccionId INT = NULL,
    @grado VARCHAR(50) = NULL,
@@ -12,7 +12,7 @@ BEGIN
 	
 	IF (@action = 'C') --Create
 	BEGIN
-		INSERT INTO Seccion VALUES(@grado, @aula, @profesorId)
+		INSERT INTO Seccion VALUES(@grado, @aula, @profesorId, 1)
 	END
 	
 	IF (@action = 'R') --Read
@@ -21,6 +21,7 @@ BEGIN
 		FROM Seccion s WITH(NOLOCK)  
 		INNER JOIN Profesor p WITH(NOLOCK) ON s.ProfesorId = p.ProfesorId
 		WHERE s.ProfesorId = ISNULL(@profesorId, s.ProfesorId)
+		AND s.IsActive = 1
 	END
 	
 	IF (@action = 'U') --Update
@@ -32,20 +33,9 @@ BEGIN
 	
 	IF (@action = 'D') --DELETE
 	BEGIN
-		DELETE Seccion WHERE SeccionId = @seccionId
+		UPDATE Seccion SET IsActive = 0 WHERE SeccionId = @seccionId
 	END
-	/*
-	IF (@action = 'M') --Resultados obtenidos de mejoramiento de seccion
-	BEGIN
-		SELECT c.Nombre [Comite], a.Nombre [Actividad], a.DetalleActividades [Detalle], a.Observaciones, a.Estimado, ta.Descripcion [Tipo de actividad]
-		FROM Comite c WITH(NOLOCK)
-		INNER JOIN Actividad a WITH(NOLOCK) ON a.ComiteId = c.ComiteId
-		INNER JOIN TipoActividad ta WITH(NOLOCK) ON ta.TipoActividadId = a.TipoActividadId
-		WHERE c.ComiteId = ISNULL(@idComite, c.ComiteId)
-		AND ta.TipoActividadId = 3 --Mejoramiento
-	END
-	*/
-	
+
 	IF(@action <> 'R')
 	BEGIN
 		--Insertando data en bitácora
