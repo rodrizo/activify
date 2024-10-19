@@ -20,6 +20,7 @@ BEGIN
 			@resultado = CONVERT(DECIMAL(10,2), (a.Monto - ISNULL(SUM(g.Monto), 0)))
 		FROM Actividad a WITH(NOLOCK)  
 		LEFT JOIN Gasto g WITH(NOLOCK) ON g.ActividadId = a.ActividadId
+			AND g.IsActive = 1
 		WHERE a.ActividadId = ISNULL(@idActividad, a.ActividadId)
 		GROUP BY a.Monto
 
@@ -54,6 +55,7 @@ BEGIN
 			@resultado2 = CONVERT(DECIMAL(10,2), (a.Monto - ISNULL(SUM(g.Monto), 0)))
 		FROM Actividad a WITH(NOLOCK)  
 		LEFT JOIN Gasto g WITH(NOLOCK) ON g.ActividadId = a.ActividadId
+			AND g.IsActive = 1
 		WHERE a.ActividadId = ISNULL(@idActividad, a.ActividadId)
 		GROUP BY a.Monto
 

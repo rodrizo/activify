@@ -79,7 +79,7 @@ namespace mineduc.Controllers
                 {
                     command.Connection = connection;
                     connection.Open();
-                    command.CommandText = "SELECT SeccionId, CONCAT(Grado, ' - ', Aula) [Nombre] FROM Seccion";
+                    command.CommandText = "SELECT SeccionId, CONCAT(Grado, ' - ', Aula) [Nombre] FROM Seccion ORDER BY 2";
                     command.CommandType = CommandType.Text;
                     reader = command.ExecuteReader();
                     dt.Load(reader);

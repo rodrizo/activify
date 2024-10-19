@@ -37,6 +37,7 @@ BEGIN
 		INNER JOIN TipoActividad ta WITH(NOLOCK) ON ta.TipoActividadId = a.TipoActividadId
 		LEFT JOIN Alumno al WITH(NOLOCK) ON al.AlumnoId = a.AlumnoId
 		LEFT JOIN Gasto g WITH(NOLOCK) ON g.ActividadId = a.ActividadId
+			AND g.IsActive = 1
 		WHERE a.SeccionId = ISNULL(@seccionId, a.SeccionId)
 		AND a.IsActive = 1
 		GROUP BY a.ActividadId, a.Nombre, a.Fecha, a.Monto, a.Observaciones, ta.Descripcion, CONCAT(s.Grado, ' - ', s.Aula), al.Nombre
