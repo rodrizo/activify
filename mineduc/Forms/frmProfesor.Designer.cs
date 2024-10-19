@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.gridProfesores = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -79,9 +78,9 @@
             this.gridProfesores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridProfesores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -90,14 +89,6 @@
             this.gridProfesores.Location = new System.Drawing.Point(452, 47);
             this.gridProfesores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridProfesores.Name = "gridProfesores";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridProfesores.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gridProfesores.RowHeadersVisible = false;
             this.gridProfesores.RowHeadersWidth = 62;
             this.gridProfesores.RowTemplate.Height = 28;

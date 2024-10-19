@@ -50,7 +50,7 @@ BEGIN
 		SELECT 
 			@resultado = CONVERT(DECIMAL(10,2), (@monto - ISNULL(SUM(g.Monto), 0)))
 		FROM Actividad a WITH(NOLOCK)  
-		INNER JOIN Gasto g WITH(NOLOCK) ON g.ActividadId = a.ActividadId
+		LEFT JOIN Gasto g WITH(NOLOCK) ON g.ActividadId = a.ActividadId
 		WHERE a.ActividadId = ISNULL(@actividadId, a.ActividadId)
 		AND a.IsActive = 1
 		GROUP BY a.Monto
